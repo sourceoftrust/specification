@@ -35,5 +35,5 @@ This proposed definition is an original synthesis of research on source credibil
 The specification is developed publicly through discussion, issues, and proposed changes. Contributions can refine terminology, examine the principles, and provide documented examples. Revisions are recorded in the repository so the development of the framework can be followed over time.
 
 - [GitHub organization](https://github.com/sourceoftrust)
-- [Read the specification — Editor’s Draft, version 0.1](/specification/source-of-trust/)
+- [Read the specification — Editor’s Draft, version 0.2.0](/specification/source-of-trust/)
 - [Discuss on Reddit](https://reddit.com/r/sourceoftrust)

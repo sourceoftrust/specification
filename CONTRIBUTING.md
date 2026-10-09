@@ -21,3 +21,7 @@ and configuration contributions under MIT. The file categories are specified in
 [LICENSE-MIT](LICENSE-MIT). Preserve the MIT notice when reusing website code under MIT.
 Earlier CC0 grants remain effective. Declare any third-party material and its
 license, and contribute only material you are authorized to license.
+
+For a specification release, synchronize the visible version, structured metadata,
+package version, and CHANGELOG.md. Future release tags use `vMAJOR.MINOR.PATCH`
+and identify the commit verified on the published site. Preserve existing tags.

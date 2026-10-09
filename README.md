@@ -1,7 +1,7 @@
 # Source of Trust
 
 The independent, open Source of Trust initiative's reference website and
-Editor's Draft v0.1. Editorial content is English and maintained in Markdown.
+Editor's Draft v0.2.0. Editorial content is English and maintained in Markdown.
 Astro generates static HTML and CSS. Cloudflare Workers serves Static Assets;
 a small server-side handler redirects `www` to the canonical host.
 
@@ -44,3 +44,9 @@ Repository CI builds and verifies the site without deploying it.
 code remain available under their original terms; the existing history and
 version tags are preserved. Dependencies and referenced works retain their own
 licenses. See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution terms.
+
+## Version history
+
+See [CHANGELOG.md](CHANGELOG.md). Future specification snapshots use Git tags
+`vMAJOR.MINOR.PATCH`, created on the published commit after deployment verification.
+The historical `v0.1` tag is preserved.

@@ -1,9 +1,9 @@
 ---
 layout: ../../../layouts/Specification.astro
 title: Source of Trust – Core Definition and Conceptual Framework
-description: Editor’s Draft version 0.1 defining Source of Trust, its terminology, and six fundamental principles for trustworthy information sources.
+description: Editor’s Draft version 0.2.0 defining Source of Trust, its terminology, and six fundamental principles for trustworthy information sources.
 date: '2026-10-09'
-version: '0.1'
+version: '0.2.0'
 ---
 ## Abstract
 
@@ -11,7 +11,7 @@ This document proposes Source of Trust (SoT) as a framework for justified relian
 
 ## Status of This Document
 
-This document is an **Editor's Draft**, version **0.1**, published on **9 October 2026**. The initiative is in **Early Development**. It proposes terminology and principles for public review. Domain-specific assessment criteria and methods are subjects for subsequent specification work.
+This document is an **Editor's Draft**, version **0.2.0**, published on **9 October 2026**. The initiative is in **Early Development**. It proposes terminology and principles for public review. Recommendations guide source descriptions and assessments according to the roles and scope defined in §3. Domain-specific assessment criteria and methods are subjects for subsequent specification work.
 
 Feedback and proposed changes are welcome through [GitHub Issues](https://github.com/sourceoftrust/specification/issues) and pull requests in the [public repository](https://github.com/sourceoftrust/specification). Discussion also takes place in the [Source of Trust community](https://reddit.com/r/sourceoftrust). Git history records revisions; the Latest Version URL identifies the current draft.
 
@@ -38,12 +38,13 @@ The six principles below organize that assessment. Identity establishes who is i
 ## 2. Terminology
 
 <dl class="terms">
-<dt id="term-entity">Information-providing entity</dt><dd>A distinguishable person, organization, or accountable service that provides information. This draft uses “entity” for the provider; a publication is an information artifact associated with that provider.</dd>
+<dt id="term-entity">Information-providing entity</dt><dd>A distinguishable person, organization, or accountable service that provides information. This draft uses “entity” for the provider; a publication is an information artifact associated with that provider. A described person, product, place, or other subject is distinguished from the provider of its description.</dd>
 <dt id="term-source">Information source</dt><dd>The provider considered in relation to the information it supplies. When a document or dataset is called a source, its responsible provider and relevant upstream sources should also be identified.</dd>
 <dt id="term-context">Context</dt><dd>The subject, intended use, time period, and conditions within which reliance is assessed, including the consequences of error.</dd>
 <dt id="term-claim">Claim</dt><dd>An assertion about the world whose meaning, scope, and supporting grounds can be examined.</dd>
 <dt id="term-identity">Identity</dt><dd>The attributes and identifiers used to distinguish a provider and connect it to its publications.</dd>
 <dt id="term-competence">Competence</dt><dd>The relevant knowledge, capabilities, or access to observations that enable a provider to supply dependable information in a specified domain.</dd>
+<dt id="term-verification">Verification</dt><dd>A documented examination of a specified claim or relationship against stated criteria, reporting the method, evidence, outcome, and limitations. Independent confirmation is corroboration by an assessor whose relevant independence is explained.</dd>
 <dt id="term-integrity">Integrity</dt><dd>Practices directed toward honest and accurate communication, including faithful reporting, disclosure of relevant interests and uncertainty, and correction of material errors.</dd>
 <dt id="term-authority">Epistemic authority</dt><dd>A supported basis for treating a provider as knowledgeable about a specified matter, such as expertise, direct observation, or responsibility for the relevant records.</dd>
 <dt id="term-attribution">Attribution</dt><dd>A stated relationship between information and the agent responsible for producing, publishing, or transforming it, with the role specified.</dd>
@@ -55,13 +56,24 @@ The six principles below organize that assessment. Identity establishes who is i
 <dt id="term-trust-signal">Trust signal</dt><dd>An observable feature used as an indicator when assessing a source or claim. Its evidential value depends on what it indicates, how it can be checked, and the context of use.</dd>
 </dl>
 
-## 3. Scope and Interpretation
+<span id="3-scope-and-interpretation"></span>
 
-The framework concerns information providers and the grounds for relying on their information. An assessment should specify its subject matter and use, the publications or claims examined, the evaluation date, and the available evidence. The appropriate depth of examination depends on the consequences of error.
+## 3. Scope and Applicability
 
-Identity establishes a checkable connection to a provider. Provenance records how information arose. The support for a claim is then evaluated through its evidence and methods. In a PROV representation, responsible providers can be represented as agents and publications as entities; PROV-DM supplies the detailed model for those relationships. [PROV-DM, §§2.1 and 5.3](#ref-prov-dm)
+The framework describes information providers and the grounds for relying on their information. Its recommendations apply according to the following roles:
 
-The principles are complementary and address different questions. An evaluator should record findings and uncertainty for each relevant dimension, explain how they support the conclusion, and revisit the assessment when circumstances or evidence change. The meaning and importance of each observation should be justified for the stated use.
+- **Information source:** responsible for its own claims, information practices, disclosures, and corrections.
+- **Signal publisher:** responsible for accurately representing a signal's origin, meaning, status, and any transformations it performs.
+- **Evaluator:** responsible for the scope, methods, evidence, uncertainty, and conclusions of an assessment.
+- **Supporting tool:** responsible for accurately performing and describing its stated functions. It may support selected dimensions through collection, publication, comparison, or examination of information.
+
+One participant may perform several roles. A tool provider publishing its own signals or assessments also acts as their publisher or evaluator. Responsibility follows the claims made and the activities performed.
+
+An assessment should specify its subject matter and use, publications or claims examined, dimensions addressed, evidence base, methods, and evaluation date. Partial assessments are useful when their conclusions remain within that scope. Findings about a selected dimension support conclusions about that dimension; a broader judgment of trustworthiness requires evidence adequate to its broader scope. Examination depth should reflect the consequences of error.
+
+Participants should distinguish activities they control, properties they can examine with limited evidence, and outcomes dependent on other parties. Sources can maintain their own records and corrections; external records, upstream disclosures, and downstream use depend on the relevant parties. Assessments should distinguish information that is unavailable, not examined, insufficiently supported, or contradicted, and explain how material gaps affect their conclusions. Reassessment should respond to relevant changes in evidence or context.
+
+The principles describe properties and assessment practices. Implementations may use suitable human, organizational, or technical methods for the selected purpose. The role and scope of a tool determine its contribution. In a PROV representation, providers can be represented as agents and publications as entities; this is one model for expressing provenance. [PROV-DM, §§2.1 and 5.3](#ref-prov-dm)
 
 ## 4. Core Definition
 
@@ -71,7 +83,7 @@ A Source of Trust (SoT) is an identifiable information-providing entity for whic
 
 **Identifiable** means the provider can be distinguished and its relationship to the information checked. **Relevant competence** concerns its ability to know or establish what it reports. **Integrity** concerns the quality of its communication practices. **Reliable information practices** include appropriate methods, faithful attribution, documented provenance, and responses to material errors.
 
-**Evidence-based justification** connects those properties to the quality and support of the information actually used. A documented assessment should examine the claims’ accuracy, relevance, timeliness, uncertainty, and fitness for the stated purpose. **Within a defined context** sets the boundaries of the conclusion.
+**Evidence-based justification** connects those properties to the quality and support of the information actually used. A documented assessment should examine the examined claims’ accuracy, relevance, timeliness, uncertainty, and fitness for the stated purpose. Reliability judgments should state their observation period, conditions, and supporting grounds; documented practices supply evidence whose significance is assessed through their operation and results. **Within a defined context** sets the boundaries of the conclusion.
 
 The definition synthesizes source and content evaluation from [Sperber et al.](#ref-sperber), the distinction between perceived credibility and its evaluation discussed by [Metzger and Flanagin](#ref-metzger-flanagin), context-sensitive quality from [Wang and Strong](#ref-wang-strong), and traceable responsibility from [PROV-DM](#ref-prov-dm). The wording and organization are proposed by the Source of Trust initiative.
 
@@ -81,9 +93,9 @@ The definition synthesizes source and content evaluation from [Sperber et al.](#
 
 **Question: Who is providing the information?**
 
-A source description should identify the provider, distinguish it from similarly named entities, and supply checkable links to its publications. Useful material includes maintained identity records, attributable contact or responsibility information, and evidence connecting the provider to the publication channel. Verification should state which relationship was checked and by what method.
+A source description should identify the provider, distinguish it from similarly named entities, and supply checkable links to its publications. Useful material includes maintained identity records, attributable contact or responsibility information, and evidence connecting the provider to the publication channel. Identity assertions and links should identify the relationship claimed. Reports of verification should identify the examiner, criteria, evidence, date, outcome, and limitations; independent confirmation should explain the relevant independence of the confirming party.
 
-URIs provide a shared identification mechanism on the Web. This framework uses stable identifiers to connect descriptions, while the supporting records establish the provider’s identity and responsibility. [Web Architecture, §2](#ref-webarch)
+URIs provide a shared identification mechanism on the Web. This framework uses stable identifiers to connect descriptions, while supporting records provide evidence for the specific identity or responsibility relationship examined. [Web Architecture, §2](#ref-webarch)
 
 ### 5.2. Authority
 
@@ -91,13 +103,13 @@ URIs provide a shared identification mechanism on the Web. This framework uses s
 
 A source description should explain relevant expertise, first-hand access, or responsibility for the records being reported. Evidence may include documented methods, relevant work, qualifications, or a defined custodial role. The scope of knowledge should be explicit: an organization may be well positioned to report its own opening hours, while a scientific claim requires evidence appropriate to that field.
 
-This principle concerns epistemic authority. Institutional responsibility identifies a role; domain competence establishes a capacity to know. Relevant interests, methodological limitations, and communication practices should be considered alongside them. [Sperber et al., §4](#ref-sperber)
+This principle concerns epistemic authority. Institutional responsibility identifies a role; domain competence establishes a capacity to know. Qualifications and identity checks support conclusions within their demonstrated scope. Relevant interests, methodological limitations, and communication practices should be considered alongside them. [Sperber et al., §4](#ref-sperber)
 
 ### 5.3. Provenance
 
 **Question: Where did the information originate, and how did it reach this publication?**
 
-A publication should identify relevant creators, publishers, dates, upstream material, and transformations. Its provenance should distinguish original observation from quotation, aggregation, and inference, and record material revisions. Links should enable readers to inspect the earlier material and the roles of the agents involved.
+A publication should identify relevant creators, publishers, dates, upstream material, and transformations. Its provenance should distinguish original observation from quotation, aggregation, and inference, and record material revisions. Available links or other suitable records should enable inspection of earlier material and agent roles. Publishers should describe known upstream history, their own transformations, and material gaps, including limits on access to supporting records.
 
 PROV-DM supplies relationships for attribution and derivation. This framework uses those distinctions to make the chain of responsibility inspectable. The adequacy of the resulting claims is examined through evidence. [PROV-DM, §§5.2–5.3](#ref-prov-dm)
 
@@ -105,15 +117,15 @@ PROV-DM supplies relationships for attribution and derivation. This framework us
 
 **Question: What supports this claim, and how can that support be examined?**
 
-Claims should be connected to relevant records, observations, methods, or reasoned arguments. Readers should be able to identify the supporting material, inspect what it establishes, and understand the connection to the conclusion. Descriptions should distinguish observed results from interpretation, specify relevant uncertainty, and address material contrary evidence.
+Claims should be connected to relevant records, observations, methods, or reasoned arguments. Readers should be able to identify the supporting material, inspect what it establishes, and understand the connection to the conclusion. Descriptions should distinguish observed results from interpretation, specify relevant uncertainty, and address material contrary evidence known or found within the stated examination scope.
 
-The kind and strength of support required depend on the claim and intended use. For corroboration, evaluators should examine whether cited publications draw on independent observations or repeat a common upstream account. This is a proposed application of the source-and-content distinction in [Sperber et al., §§4 and 6](#ref-sperber).
+The kind and strength of support required depend on the claim and intended use. A documented procedure provides evidence about that procedure; assessment of integrity also examines its operation, disclosures, and responses to errors. An attributable customer experience can support claims about that experience; generalization depends on the collection method, selection, and relevant context. For corroboration, evaluators should examine whether cited publications draw on independent observations or repeat a common upstream account. This is a proposed application of the source-and-content distinction in [Sperber et al., §§4 and 6](#ref-sperber).
 
 ### 5.5. Consistency
 
 **Question: Are claims coherent across comparable contexts, and are changes explained?**
 
-A source should use coherent descriptions and explain material differences across publications. Comparisons should account for dates, definitions, methods, and scope. Corrections and substantive revisions should remain traceable, so readers can understand how the current account developed.
+A source should use coherent descriptions and explain material differences across publications. Comparisons should identify the publications examined and account for dates, definitions, methods, and scope. Corrections and substantive revisions should remain traceable, so readers can understand how the current account developed.
 
 Metzger and Flanagin discuss cross-source agreement as a credibility heuristic. In this framework, its evidential weight is assessed through the sources’ provenance, independence, and supporting material. A documented correction can strengthen the account by resolving an identified error. [Metzger and Flanagin, §5.3](#ref-metzger-flanagin); [DWBP, best practices 7–8](#ref-dwbp)
 
@@ -121,13 +133,13 @@ Metzger and Flanagin discuss cross-source agreement as a credibility heuristic. 
 
 **Question: Can the information and its supporting grounds be found and understood?**
 
-Sources should provide stable links, clear language, meaningful document structure, and accessible supporting material. Human-readable explanations and machine-readable metadata should express the same claims, attribution, and scope. Where access is limited, descriptions should explain the available evidence and how it may be examined.
+Sources should provide stable links, clear language, meaningful document structure, and accessible supporting material. Where human-readable explanations and machine-readable metadata are both provided, they should express consistent claims, attribution, and scope. Where access is limited, descriptions should explain the available evidence and how it may be examined. Publishers maintain the access mechanisms they control; assessments distinguish observed availability from downstream discovery, processing, or use by other systems.
 
 Wang and Strong identify interpretability and accessibility as quality dimensions. W3C’s publishing guidance provides technical practices for metadata, persistent identification, and provenance. This framework treats accessibility as an enabling condition for evaluation. [Wang and Strong, pp. 19–22](#ref-wang-strong); [DWBP](#ref-dwbp)
 
 ### 5.7. Interpreting Trust Signals
 
-A trust signal should be described by **the property it indicates**, **its origin**, **the available verification method**, and **its relevance to the current assessment**. For example, a qualification can support a claim of competence in its field; a revision log can document correction practices; a primary record can support a particular factual claim.
+A trust signal should be described by **the property it indicates**, **its origin**, **its examination status**, and **its relevance to the current assessment**. Descriptions should distinguish the assertion and its publication, available means of examination, checks actually performed, their outcomes, and any independent confirmation. These describe different aspects of evidence; its strength depends on method, scope, and supporting grounds. For example, a qualification can support a claim of competence in its field; a revision log can document correction practices; a primary record can support a particular factual claim.
 
 Research describes how familiarity, reputation, and social endorsement enter credibility judgments. This draft proposes examining the grounds behind such cues and preserving the distinction between an observed signal and the conclusion drawn from it. [Metzger and Flanagin, §§5.1–5.3](#ref-metzger-flanagin)
 

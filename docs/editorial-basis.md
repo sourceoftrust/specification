@@ -1,4 +1,4 @@
-# Editorial basis — draft 0.1
+# Editorial basis — draft 0.2.0
 
 Reviewed 9 October 2026. The public specification contains complete citations
 and links to the texts used. Original synthesis is identified in sections 1.2
@@ -37,6 +37,15 @@ communication, evidence disclosure, interests, uncertainty, and correction
 practices. Consistency is assessed with provenance and source independence;
 accessibility enables evaluation. The current draft proposes a framework whose
 domain-specific assessment methods remain open for subsequent work.
+
+## Refinement in 0.2.0
+
+The core definition is unchanged from 0.1. Role allocation, partial assessments,
+control boundaries, and verification reporting clarify the initiative's proposed
+framework. These are editorial applications of the existing foundations, rather
+than requirements attributed to the cited research. Source properties remain
+subject to evidence appropriate to the intended use; selected tool functions and
+limited observations justify conclusions within their stated scope.
 
 ## Publication discipline
 

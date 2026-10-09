@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
 import worker from '../worker/index.js';
+const { version } = JSON.parse(readFileSync('package.json', 'utf8'));
 const origin = 'https://sourceoftrust.org';
 const paths = ['/', '/specification/source-of-trust/'];
 const definition = 'A Source of Trust (SoT) is an identifiable information-providing entity for which evidence of relevant competence, integrity, and reliable information practices justifies reliance on its attributable information within a defined context.';
@@ -23,7 +24,7 @@ for (const path of paths) {
   const doc = data['@graph'][1];
   assert.equal(doc.url, origin + path);
   assert.equal(doc.license, 'https://creativecommons.org/publicdomain/zero/1.0/');
-  if (path !== '/') { assert.equal(doc['@type'], 'TechArticle'); assert.equal(doc.version, '0.1'); assert.equal(doc.datePublished, '2026-10-09'); }
+  if (path !== '/') { assert.equal(doc['@type'], 'TechArticle'); assert.equal(doc.version, version); assert(html.includes(`https://github.com/sourceoftrust/specification/tree/v${version}`)); assert(html.includes('id="3-scope-and-interpretation"')); assert.equal(doc.datePublished, '2026-10-09'); }
   const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(m => m[1]);
   assert.equal(ids.length, new Set(ids).size);
   for (const m of html.matchAll(/href="(\/[^"#]*)(?:#([^"]+))?"/g)) {

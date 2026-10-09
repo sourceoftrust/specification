@@ -1,13 +1,13 @@
 ---
 layout: ../layouts/Home.astro
 title: Source of Trust
-description: An open initiative defining the principles, properties, and methods of trustworthy information sources in AI-mediated information systems.
+description: Source of Trust definitions and specifications, developed and published by the Source of Trust Initiative (SoTI).
 ---
 # Source of Trust
 
 <p class="subtitle">Defining trustworthy information sources in the age of artificial intelligence.</p>
 
-Source of Trust is an open initiative dedicated to defining the principles, properties, and methods that make information sources identifiable, verifiable, and trustworthy in AI-mediated information systems.
+Source of Trust is an open concept for describing justified reliance on identifiable information sources. The [Source of Trust Initiative (SoTI)](/about/) develops, maintains, and publishes its specifications.
 
 ## Core Definition
 
@@ -28,9 +28,13 @@ This proposed definition is an original synthesis of research on source credibil
 <dt>Accessibility</dt><dd>Information and supporting material that humans and machines can locate and interpret.</dd>
 </dl>
 
+<span id="initiative"></span>
+
 ## Open Initiative
 
 **Project status: Early Development**
+
+SoTI is the Publisher and Maintainer of the Source of Trust specifications. Its [editorial responsibility and development principles](/about/) are documented publicly.
 
 The specification is developed publicly through discussion, issues, and proposed changes. Contributions can refine terminology, examine the principles, and provide documented examples. Revisions are recorded in the repository so the development of the framework can be followed over time.
 

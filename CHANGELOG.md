@@ -1,5 +1,12 @@
 # Changelog
 
+## Website development — 9 October 2026
+
+- Document the Source of Trust Initiative (SoTI), editorial responsibility, and
+  public participation on About; add reusable publisher and editor metadata.
+- Distinguish initiative, website, and concept in JSON-LD. Add About to navigation
+  and sitemap. Specification content and version 0.2.0 remain unchanged.
+
 ## 0.2.0 — 9 October 2026
 
 - Clarify source, signal publisher, evaluator, and supporting tool responsibilities

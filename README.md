@@ -1,6 +1,6 @@
 # Source of Trust
 
-The independent, open Source of Trust initiative's reference website and
+The Source of Trust Initiative (SoTI) maintains and publishes this reference website and
 Editor's Draft v0.2.0. Editorial content is English and maintained in Markdown.
 Astro generates static HTML and CSS. Cloudflare Workers serves Static Assets;
 a small server-side handler redirects `www` to the canonical host.
@@ -17,12 +17,15 @@ npm run verify
 npm run preview
 ```
 
-Only two editorial pages are published:
+Three editorial pages are published:
 - https://sourceoftrust.org/
+- https://sourceoftrust.org/about/
 - https://sourceoftrust.org/specification/source-of-trust/
 
 `src/pages/index.md` and `src/pages/specification/source-of-trust/index.md`
-contain the editorial content. Shared layout, styles, and metadata are under
+contain the concept and specification content. `src/pages/about.md` documents
+the initiative and Stefan Mayr’s current role as Founder and Initial Editor.
+Shared publisher and entity metadata is maintained in `src/data/initiative.js`. Shared layout, styles, and metadata are under
 `src/layouts/` and `src/styles/`. Future documents may be added under
 `specification/`, `rfc/`, and `concepts/`; no placeholder pages are generated.
 

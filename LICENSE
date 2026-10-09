@@ -22,7 +22,7 @@ MIT. This includes:
 
 - Astro layouts and pages (`src/**/*.astro`), CSS (`src/styles/`), and TypeScript
   (`src/**/*.ts`).
-- JavaScript in `worker/` and `scripts/`.
+- JavaScript in `src/data/`, `worker/`, and `scripts/`.
 - `astro.config.mjs`, `wrangler.jsonc`, `package.json`, `package-lock.json`,
   `.gitignore`, `.github/workflows/`, `public/_headers`, and `public/robots.txt`.
 

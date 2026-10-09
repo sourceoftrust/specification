@@ -30,6 +30,14 @@ Participants can [open an issue](https://github.com/sourceoftrust/specification/
 
 The initial editor reviews proposals for clarity, consistency, evidence, and implementation neutrality. Editorial decisions and their rationale are recorded in the relevant issue or pull request; accepted changes are recorded in Git history and the changelog. Participants can raise alternative interpretations or new evidence through the same public channels.
 
+## Supporting Organizations
+
+The Source of Trust Initiative welcomes organizations interested in contributing to the development and adoption of open specifications for trustworthy information sources.
+
+Organizations can participate through technical contributions, specification reviews, research, reference implementations, and public discussions.
+
+Participation is open, and contributions are documented transparently.
+
 ## Principles of Development
 
 - **Traceable reasoning:** connect substantive claims to inspectable sources and distinguish original synthesis from cited findings.

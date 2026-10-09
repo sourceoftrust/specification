@@ -47,6 +47,9 @@ required, use the prepared custom-domain configuration:
 npx wrangler deploy --config wrangler.domains.jsonc
 ```
 
+After successful attachment, promote the reviewed domain routes into the default
+`wrangler.jsonc` so future deployments use the same domain configuration.
+
 This attaches only `sourceoftrust.org` and `www.sourceoftrust.org` to the new
 Worker. The handler returns a permanent 301 from www to HTTPS on the apex,
 preserving the path and query string. Cloudflare manages the custom-domain

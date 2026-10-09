@@ -11,9 +11,8 @@ Provide verifiable references when introducing external claims.
 Keep the MVP static and accessible. Avoid client-side scripts and additional
 features or dependencies unless they are necessary for an agreed requirement.
 Run `npm ci`, `npm run build`, and `npm run verify` before submitting.
-Update the visible publication metadata, sitemap date, and structured data
-when publishing a revised draft. Metadata in each Markdown file controls its
-JSON-LD; the displayed date is in the specification layout.
+Update the publication metadata in the specification Markdown when publishing
+a revised draft. Its date also controls the visible date, JSON-LD, and sitemap.
 
 By contributing, you agree to release your original contribution under CC0 1.0
 Universal as described in LICENSE. Declare any third-party material and its license.

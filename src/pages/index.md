@@ -12,20 +12,20 @@ Source of Trust is an open initiative dedicated to defining the principles, prop
 ## Core Definition
 
 <blockquote class="definition">
-A Source of Trust (SoT) is an identifiable and verifiable entity that provides reliable, attributable, and evidence-supported information within a defined context.
+A Source of Trust (SoT) is an identifiable information-providing entity for which evidence of relevant competence, integrity, and reliable information practices justifies reliance on its attributable information within a defined context.
 </blockquote>
 
-This working definition is developed in the [Core Definition and Conceptual Framework](/specification/source-of-trust/#4-core-definition).
+This proposed definition is an original synthesis of research on source credibility and information quality, together with technical work on provenance. Its rationale and references are provided in the [Core Definition and Conceptual Framework](/specification/source-of-trust/#4-core-definition).
 
 ## Core Principles
 
 <dl class="principles">
-<dt>Identity</dt><dd>Clear and verifiable identification of the information source.</dd>
-<dt>Authority</dt><dd>Demonstrable expertise and authority within a defined subject or context.</dd>
-<dt>Provenance</dt><dd>Traceable origin and attribution of information.</dd>
-<dt>Evidence</dt><dd>Verifiable facts, references, and supporting information.</dd>
-<dt>Consistency</dt><dd>Coherent and consistent information across relevant sources.</dd>
-<dt>Accessibility</dt><dd>Information that is accessible and interpretable by humans and machines.</dd>
+<dt>Identity</dt><dd>A distinguishable source with checkable links between its identity and publications.</dd>
+<dt>Authority</dt><dd>Evidence of relevant expertise, first-hand knowledge, or responsibility for a defined subject.</dd>
+<dt>Provenance</dt><dd>Traceable origins, attribution, and relevant transformations of information.</dd>
+<dt>Evidence</dt><dd>Relevant, inspectable support for specific claims, with methods and uncertainty made explicit.</dd>
+<dt>Consistency</dt><dd>Coherent claims and documented updates, assessed with attention to source independence and time.</dd>
+<dt>Accessibility</dt><dd>Information and supporting material that humans and machines can locate and interpret.</dd>
 </dl>
 
 ## Open Initiative

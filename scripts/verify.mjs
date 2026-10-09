@@ -3,7 +3,7 @@ import { readFileSync, existsSync } from 'node:fs';
 import worker from '../worker/index.js';
 const origin = 'https://sourceoftrust.org';
 const paths = ['/', '/specification/source-of-trust/'];
-const definition = 'A Source of Trust (SoT) is an identifiable and verifiable entity that provides reliable, attributable, and evidence-supported information within a defined context.';
+const definition = 'A Source of Trust (SoT) is an identifiable information-providing entity for which evidence of relevant competence, integrity, and reliable information practices justifies reliance on its attributable information within a defined context.';
 for (const path of paths) {
   const html = readFileSync('dist' + path + 'index.html', 'utf8');
   assert(html.includes(definition));
@@ -38,6 +38,9 @@ assert(readFileSync('dist/robots.txt', 'utf8').includes('User-agent: *\nAllow: /
 const redirect = await worker.fetch(new Request('https://www.sourceoftrust.org/specification/source-of-trust/?x=1'), {});
 assert.equal(redirect.status, 301);
 assert.equal(redirect.headers.get('location'), origin + '/specification/source-of-trust/?x=1');
+const httpsRedirect = await worker.fetch(new Request('http://sourceoftrust.org/?x=1'), {});
+assert.equal(httpsRedirect.status, 301);
+assert.equal(httpsRedirect.headers.get('location'), origin + '/?x=1');
 const response = await worker.fetch(new Request(origin + '/'), { ASSETS: { fetch: () => new Response('static') } });
 assert.equal(await response.text(), 'static');
 console.log('Verified sitemap, robots and www redirect.');

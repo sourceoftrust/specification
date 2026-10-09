@@ -28,30 +28,19 @@ contain the editorial content. Shared layout, styles, and metadata are under
 
 ## Cloudflare deployment
 
-Worker: `sourceoftrust-specification`.
-The production `wrangler.jsonc` serves the static build in `dist/`, bound as
-`ASSETS`, on `sourceoftrust.org` and `www.sourceoftrust.org`. Account selection
-is supplied by the authenticated Wrangler session. Missing URLs return 404.
-
-```sh
-npx wrangler login
-npm run build
-npx wrangler deploy --dry-run
-npm run deploy
-```
-
-The canonical address is https://sourceoftrust.org. The handler returns a
-permanent 301 from www to HTTPS on the apex, preserving the path and query
-string. HTTP on the apex also redirects to HTTPS. Cloudflare manages the
-custom-domain certificates. The workers.dev endpoint remains available as a
-preview; its metadata points to the canonical .org URLs.
-
-After deployment, check certificates, HTTP and www redirects, both editorial
-pages, canonical URLs, robots.txt, sitemap.xml, and a missing URL. Obtain
-approval before changing existing DNS, productive routes, or global security
-rules. Do not modify any commercial Source of Trust or other projects.
+See [the deployment guide](docs/deployment.md) for prerequisites, build checks,
+configuration review, and publication steps. The canonical address is
+https://sourceoftrust.org; www permanently redirects to HTTPS on that host.
+Repository CI builds and verifies the site without deploying it.
 
 ## License and contributions
 
-Original repository content and code are released under CC0 1.0 Universal.
-See LICENSE and CONTRIBUTING.md. Dependencies keep their own licenses.
+- Original definitions, specifications, and documentation: **CC0 1.0 Universal**,
+  with the complete terms in [LICENSE-CC0](LICENSE-CC0).
+- Original website source code and supporting configuration: **MIT**, with the
+  complete terms and copyright notice in [LICENSE-MIT](LICENSE-MIT).
+
+[LICENSE](LICENSE) specifies the file categories. Earlier CC0 releases of the
+code remain available under their original terms; the existing history and
+version tags are preserved. Dependencies and referenced works retain their own
+licenses. See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution terms.

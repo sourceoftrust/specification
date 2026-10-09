@@ -14,5 +14,10 @@ Run `npm ci`, `npm run build`, and `npm run verify` before submitting.
 Update the publication metadata in the specification Markdown when publishing
 a revised draft. Its date also controls the visible date, JSON-LD, and sitemap.
 
-By contributing, you agree to release your original contribution under CC0 1.0
-Universal as described in LICENSE. Declare any third-party material and its license.
+By contributing, you agree to release your original editorial and documentation
+contributions under CC0 1.0 Universal, and your original website implementation
+and configuration contributions under MIT. The file categories are specified in
+[LICENSE](LICENSE); complete terms are in [LICENSE-CC0](LICENSE-CC0) and
+[LICENSE-MIT](LICENSE-MIT). Preserve the MIT notice when reusing website code under MIT.
+Earlier CC0 grants remain effective. Declare any third-party material and its
+license, and contribute only material you are authorized to license.

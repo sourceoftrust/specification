@@ -8,6 +8,9 @@ for (const path of paths) {
   const html = readFileSync('dist' + path + 'index.html', 'utf8');
   assert(html.includes(definition));
   assert(html.includes('lang="en"'));
+  assert(!/<style(?:\s|>)/i.test(html), 'CSP requires external stylesheets');
+  assert(!/\sstyle=/.test(html), 'CSP disallows inline style attributes');
+  assert(html.includes('rel="stylesheet"'), 'External stylesheet required');
   assert.equal((html.match(/<h1(?:\s|>)/g) || []).length, 1);
   assert(html.includes(`rel="canonical" href="${origin + path}"`));
   assert(html.includes('name="description"'));

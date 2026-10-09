@@ -1,0 +1,11 @@
+---
+import Base from './Base.astro';
+const { frontmatter, headings } = Astro.props;
+---
+<Base title={frontmatter.title} description={frontmatter.description} canonicalPath="/specification/source-of-trust/" article date={frontmatter.date} version={frontmatter.version}>
+<div class="spec-layout">
+<aside class="toc"><nav aria-label="Table of contents"><h2>Contents</h2><ol>{headings.filter(h => h.depth === 2).map(h => <li><a href={'#' + h.slug}>{h.text}</a></li>)}</ol></nav></aside>
+<main id="main" class="spec"><header class="document-header"><p class="eyebrow">Open Specification</p><h1>{frontmatter.title}</h1><p class="document-status">Editor's Draft · Version {frontmatter.version} · <time datetime={frontmatter.date}>9 October 2026</time></p>
+<dl class="metadata"><dt>Latest Version URL</dt><dd><a href="https://sourceoftrust.org/specification/source-of-trust/">https://sourceoftrust.org/specification/source-of-trust/</a></dd><dt>GitHub Repository</dt><dd><a href="https://github.com/sourceoftrust/specification">sourceoftrust/specification</a></dd><dt>Feedback</dt><dd><a href="https://github.com/sourceoftrust/specification/issues">GitHub Issues</a></dd><dt>Content License</dt><dd><a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal</a></dd></dl></header><article><slot /></article></main>
+</div>
+</Base>

@@ -1,0 +1,25 @@
+---
+import '../styles/site.css';
+const { title, description, canonicalPath = '/', article = false, date, version } = Astro.props;
+const origin = 'https://sourceoftrust.org';
+const url = new URL(canonicalPath, origin).href;
+const license = 'https://creativecommons.org/publicdomain/zero/1.0/';
+const website = { '@type': 'WebSite', '@id': origin + '/#website', url: origin + '/', name: 'Source of Trust', inLanguage: 'en', license };
+const page = { '@type': article ? 'TechArticle' : 'WebPage', '@id': url + '#document', url, name: title, headline: title, description, inLanguage: 'en', license, isPartOf: { '@id': website['@id'] }, ...(article ? { datePublished: date, dateModified: date, version } : {}) };
+const schema = { '@context': 'https://schema.org', '@graph': [website, page] };
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{title}</title><meta name="description" content={description} /><link rel="canonical" href={url} />
+<meta property="og:type" content={article ? 'article' : 'website'} /><meta property="og:title" content={title} /><meta property="og:description" content={description} /><meta property="og:url" content={url} /><meta property="og:site_name" content="Source of Trust" /><meta property="og:locale" content="en_US" />
+<script type="application/ld+json" set:html={JSON.stringify(schema).replace(/</g, '\u003c')} />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><a class="wordmark" href="/">Source of Trust</a><nav aria-label="Primary"><a href="/specification/source-of-trust/">Specification</a><a href="https://github.com/sourceoftrust">GitHub</a><a href="https://reddit.com/r/sourceoftrust">Community</a></nav></header>
+<slot />
+<footer class="site-footer">Website content released under a <a href={license}>Creative Commons CC0 Public Domain Dedication</a>, unless otherwise specified.</footer>
+</body>
+</html>

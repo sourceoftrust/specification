@@ -1,13 +1,31 @@
 ---
 layout: ../layouts/Home.astro
 title: Source of Trust
-description: Source of Trust definitions and specifications, developed and published by the Source of Trust Initiative (SoTI).
+description: The Source of Trust Initiative develops an open, evidence-based reference framework for source recognition, selection, and citation in AI Search and GEO.
 ---
 # Source of Trust
 
-<p class="subtitle">Defining trustworthy information sources in the age of artificial intelligence.</p>
+<p class="subtitle">Making AI Search Trust More Transparent.</p>
 
-Source of Trust is an open concept for describing justified reliance on identifiable information sources. The [Source of Trust Initiative (SoTI)](/about/) develops, maintains, and publishes its specifications.
+AI search engines select information sources and present answers with supporting citations. The mechanisms connecting source recognition, selection, and citation are only partly documented.
+
+The [Source of Trust Initiative (SoTI)](/about/) develops an open, evidence-based reference framework around one research question:
+
+**What makes an information source a Source of Trust for AI search engines?**
+
+By combining official search engine documentation, technical research, observed AI search behavior, and public discussion, the initiative examines the characteristics and signals relevant to source selection, credibility, and AI visibility. Its research focuses on **AI Search and Generative Engine Optimization (GEO)**, with practical relevance for SEO/GEO professionals, developers, and researchers.
+
+## Our Approach — Observe. Discuss. Explain.
+
+- **Observe:** analyze official documentation, technical developments, and observable AI search behavior, recording the system, query, context, and date.
+- **Discuss:** examine findings, GEO hypotheses, and alternative interpretations through public discussion.
+- **Explain:** organize the findings into a traceable Source-of-Trust reference model, distinguishing documented facts, observations, and the initiative’s conclusions.
+
+## Context Matters
+
+A source’s relevance and the grounds for relying on it depend on the query, subject, and information need. A local business may be a relevant primary source for its own services; a medical explanation calls for different evidence and expertise.
+
+The trust dimensions guide contextual assessment. Their relevance and weight vary with the question; they are not a universal checklist that every source must satisfy equally. [Contextual Trust Assessment](/specification/source-of-trust/#41-contextual-trust-assessment) explains this approach.
 
 ## Core Definition
 
@@ -17,7 +35,11 @@ A Source of Trust (SoT) is an identifiable information-providing entity for whic
 
 This proposed definition is an original synthesis of research on source credibility and information quality, together with technical work on provenance. Its rationale and references are provided in the [Core Definition and Conceptual Framework](/specification/source-of-trust/#4-core-definition).
 
-## Core Principles
+<span id="core-principles"></span>
+
+## Trust Dimensions
+
+The framework uses six fundamental principles as assessment dimensions. Competence and integrity inform their interpretation across the model. The specification’s separate guidance on interpreting trust signals is not a seventh dimension.
 
 <dl class="principles">
 <dt>Identity</dt><dd>A distinguishable source with checkable links between its identity and publications.</dd>
@@ -30,14 +52,14 @@ This proposed definition is an original synthesis of research on source credibil
 
 <span id="initiative"></span>
 
-## Open Initiative
+## Open Development
 
 **Project status: Early Development**
 
 SoTI is the Publisher and Maintainer of the Source of Trust specifications. Its [editorial responsibility and development principles](/about/) are documented publicly.
 
-The specification is developed publicly through discussion, issues, and proposed changes. Contributions can refine terminology, examine the principles, and provide documented examples. Revisions are recorded in the repository so the development of the framework can be followed over time.
+The framework develops through findings and contributions submitted for review. SEO/GEO professionals, developers, and researchers can refine terminology, examine hypotheses, and provide documented examples through issues, proposed changes, and discussion. The [proposal record](/specification/source-of-trust/#7-proposal-and-change-record) explains the rationale for the current revision.
 
 - [GitHub organization](https://github.com/sourceoftrust)
-- [Read the specification — Editor’s Draft, version 0.2.0](/specification/source-of-trust/)
+- [Read the specification — Editor’s Draft, version 0.3.0](/specification/source-of-trust/)
 - [Discuss on Reddit](https://reddit.com/r/sourceoftrust)

@@ -1,6 +1,6 @@
-# Editorial basis — draft 0.2.0
+# Editorial basis — draft 0.3.0
 
-Reviewed 9 October 2026. The public specification contains complete citations
+Reviewed 10 October 2026. The public specification contains complete citations
 and links to the texts used. Original synthesis is identified in sections 1.2
 and 4; the six principles are proposed editorial guidance.
 
@@ -46,6 +46,28 @@ framework. These are editorial applications of the existing foundations, rather
 than requirements attributed to the cited research. Source properties remain
 subject to evidence appropriate to the intended use; selected tool functions and
 limited observations justify conclusions within their stated scope.
+
+## AI Search / GEO focus in 0.3.0
+
+The Core Definition and six scholarly/technical foundations are retained.
+The research object is now exclusively source recognition, contextual assessment,
+selection, and citation in AI search. Section 4.1 and the AI search applications
+of the six dimensions are the initiative's synthesis, not confirmed ranking
+factors. Section 5.7 interprets signals across the six dimensions.
+
+Official documentation consulted 10 October 2026:
+
+- Google Search Central, AI features and your website: query fan-out, product
+  variation, eligibility, and absence of special Schema.org requirements.
+- Google Search Central, Creating helpful, reliable, people-first content:
+  contextual expertise and the distinction between E-E-A-T and a ranking factor.
+- OpenAI, Overview of OpenAI Crawlers: separate search and training access.
+
+Provider-specific statements are separated from observations and editorial
+interpretation in §1.3. Citation is observed attribution rather than an automatic
+finding of trustworthiness. JSON-LD and structured data remain optional means of
+representation. P-001 and P-002 record the prepared changes without implying
+external participation or a vote. Publication and a version tag require approval.
 
 ## Publication discipline
 

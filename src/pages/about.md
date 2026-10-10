@@ -1,20 +1,24 @@
 ---
 layout: ../layouts/Home.astro
 title: About the Source of Trust Initiative
-description: Purpose, publishing responsibilities, editorial stewardship, and participation in the Source of Trust Initiative (SoTI).
+description: The Source of Trust Initiative researches source recognition, selection, and citation in AI Search and GEO, and maintains an open reference framework.
 canonicalPath: /about/
 ---
 # Source of Trust Initiative
 
-The **Source of Trust Initiative (SoTI)** develops, maintains, and publishes open Source of Trust specifications. Its role is **Publisher and Maintainer of the Source of Trust specifications**. The initiative provides a place for documenting definitions, examining their foundations, and refining a shared vocabulary for trustworthy information sources.
+The **Source of Trust Initiative (SoTI)** develops, maintains, and publishes an open, evidence-based reference framework for **AI Search and Generative Engine Optimization (GEO)**. Its central research question is: **What makes an information source a Source of Trust for AI search engines?** Its role is **Publisher and Maintainer of the Source of Trust specifications**.
 
 [Source of Trust](/specification/source-of-trust/) is the concept described by the specifications. SoTI is the initiative responsible for their development and publication.
 
 ## Purpose and Work
 
-SoTI maintains the specification texts, terminology, references, and publication history. Development takes place in the [public specification repository](https://github.com/sourceoftrust/specification), under the [Source of Trust GitHub organization](https://github.com/sourceoftrust). The website presents the current documents; version tags preserve published specification snapshots.
+SoTI examines source recognition, contextual assessment, selection, and citation in AI search systems to develop practically useful understanding of AI visibility. Its approach is **Observe. Discuss. Explain.** Official documentation, technical research, and contextual observations provide the basis for public discussion and the reference model. Documented facts, observations, and editorial interpretations are distinguished.
 
-The project is in **Early Development**. Its work focuses on clear definitions, evidence-based reasoning, and descriptions that different providers and technical implementations can use. Original specification and documentation content is available under CC0 1.0 Universal.
+SoTI maintains the specification texts, terminology, references, and publication history. Development takes place in the [public specification repository](https://github.com/sourceoftrust/specification), under the [Source of Trust GitHub organization](https://github.com/sourceoftrust). Version tags preserve published specification snapshots.
+
+The project is in **Early Development**. Its work addresses SEO/GEO professionals, developers, and researchers. The framework explains source properties and evidence in relation to AI search information needs; it is a research reference model rather than a prescribed standard for search providers. Original specification and documentation content is available under CC0 1.0 Universal.
+
+**sourceoftrust.org** is the initiative’s official website and publishes its open reference model. [Source of Trust on sourceoftrust.com](https://sourceoftrust.com/) is a separate commercial analysis product in the eeoom GEO ecosystem.
 
 ## Editorial Responsibility
 
@@ -32,9 +36,9 @@ The initial editor reviews proposals for clarity, consistency, evidence, and imp
 
 ## Supporting Organizations
 
-The Source of Trust Initiative welcomes organizations interested in contributing to the development and adoption of open specifications for trustworthy information sources.
+The Source of Trust Initiative welcomes organizations interested in contributing to research on AI search source selection and the development of its open reference model.
 
-Organizations can participate through technical contributions, specification reviews, research, reference implementations, and public discussions.
+Organizations can participate through technical contributions, specification reviews, documented AI search observations, research, and public discussions.
 
 Participation is open, and contributions are documented transparently.
 

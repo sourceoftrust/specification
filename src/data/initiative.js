@@ -11,7 +11,7 @@ export const initiative = {
   alternateName: 'SoTI',
   url: origin + '/',
   sameAs: ['https://github.com/sourceoftrust'],
-  description: 'An open project serving as Publisher and Maintainer of the Source of Trust specifications.',
+  description: 'An open initiative researching source recognition, selection, and citation in AI Search and GEO, and serving as Publisher and Maintainer of the Source of Trust reference framework.',
   founder: { '@id': editor['@id'] },
 };
 export const concept = {

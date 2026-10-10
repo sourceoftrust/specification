@@ -5,8 +5,11 @@ GitHub Issues and pull requests at https://github.com/sourceoftrust/specificatio
 
 For editorial changes, edit the Markdown under `src/pages/`. Describe the
 problem, the proposed wording, and any supporting evidence. Keep definitions
-positive, precise, context-sensitive, and consistent across both pages.
-Provide verifiable references when introducing external claims.
+precise, context-sensitive, and consistent across the editorial pages. The
+research scope is AI Search / GEO. Distinguish provider documentation, observed
+search behavior, and editorial interpretation; do not present the six assessment
+dimensions as confirmed ranking factors. Provide verifiable references when
+introducing external claims.
 
 Keep the MVP static and accessible. Avoid client-side scripts and additional
 features or dependencies unless they are necessary for an agreed requirement.

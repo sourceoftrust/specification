@@ -1,11 +1,11 @@
 ---
 import '../styles/site.css';
 import { origin, initiative, editor, concept } from '../data/initiative.js';
-const { title, description, canonicalPath = '/', article = false, date, version } = Astro.props;
+const { title, description, canonicalPath = '/', article = false, date, firstPublishedDate = date, version } = Astro.props;
 const url = new URL(canonicalPath, origin).href;
 const license = 'https://creativecommons.org/publicdomain/zero/1.0/';
 const website = { '@type': 'WebSite', '@id': origin + '/#website', url: origin + '/', name: 'Source of Trust', inLanguage: 'en', license, publisher: { '@id': initiative['@id'] }, about: { '@id': concept['@id'] } };
-const page = { '@type': article ? 'TechArticle' : canonicalPath === '/about/' ? 'AboutPage' : 'WebPage', '@id': url + '#document', url, name: title, headline: title, description, inLanguage: 'en', license, publisher: { '@id': initiative['@id'] }, about: { '@id': canonicalPath === '/about/' ? initiative['@id'] : concept['@id'] }, ...(canonicalPath === '/about/' ? { mainEntity: { '@id': initiative['@id'] } } : {}), isPartOf: { '@id': website['@id'] }, ...(article ? { datePublished: date, dateModified: date, version, editor: { '@id': editor['@id'] } } : {}) };
+const page = { '@type': article ? 'TechArticle' : canonicalPath === '/about/' ? 'AboutPage' : 'WebPage', '@id': url + '#document', url, name: title, headline: title, description, inLanguage: 'en', license, publisher: { '@id': initiative['@id'] }, about: { '@id': canonicalPath === '/about/' ? initiative['@id'] : concept['@id'] }, ...(canonicalPath === '/about/' ? { mainEntity: { '@id': initiative['@id'] } } : {}), isPartOf: { '@id': website['@id'] }, ...(article ? { datePublished: firstPublishedDate, dateModified: date, version, editor: { '@id': editor['@id'] } } : {}) };
 const schema = { '@context': 'https://schema.org', '@graph': [website, page, initiative, editor, concept] };
 ---
 <!doctype html>
@@ -18,7 +18,7 @@ const schema = { '@context': 'https://schema.org', '@graph': [website, page, ini
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header"><a class="wordmark" href="/">Source of Trust</a><nav aria-label="Primary"><a href="/specification/source-of-trust/">Specification</a><a href="/about/">About</a><a href="https://github.com/sourceoftrust">GitHub</a><a href="https://reddit.com/r/sourceoftrust">Community</a></nav></header>
+<header class="site-header"><a class="wordmark" href="/">Source of Trust</a><nav aria-label="Primary"><a href="/specification/source-of-trust/">Specification</a><a href="/about/">About</a><a href="https://github.com/sourceoftrust">GitHub</a><a href="https://reddit.com/r/sourceoftrust">Discussion</a></nav></header>
 <slot />
 <footer class="site-footer">Website content released under a <a href={license}>Creative Commons CC0 Public Domain Dedication</a>, unless otherwise specified.</footer>
 </body>
